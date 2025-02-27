@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks - Student Dashboard</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="active"><a href="notebooks.html"><i class="fas fa-book"></i> Notebooks</a></li>
+                    <li><a href="assignments.html"><i class="fas fa-tasks"></i> Assignments</a></li>
+                    <li><a href="tasks.html"><i class="fas fa-check-circle"></i> Tasks</a></li>
+                    <li><a href="calendar.html"><i class="fas fa-calendar"></i> Calendar</a></li>
+                </ul>
+            </nav>
+            <div class="modules-section">
+                <h3>Modules</h3>
+                <ul class="modules-list">
+                    <li><a href="#"><i class="fas fa-lock"></i> Information security</a></li>
+                    <li><a href="#"><i class="fas fa-shield-alt"></i> Cyber Security</a></li>
+                    <li><a href="#"><i class="fas fa-code"></i> Software engineering</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> User-centered design</a></li>
+                    <li><a href="#"><i class="fas fa-project-diagram"></i> Functional programming</a></li>
+                    <li><a href="#"><i class="fas fa-database"></i> Databases</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="greeting-section">
+                <h1>Good afternoon, Ahmed!</h1>
+                <p class="quote">"Knowledge is power. Information is liberating. Education is the premise of progress, in every society, in every family." - Kofi Annan</p>
+            </div>
+
+            <div class="section-header">
+                <h2>All Notebooks</h2>
+                <div class="view-controls">
+                    <button class="btn-grid active"><i class="fas fa-th"></i></button>
+                    <button class="btn-list"><i class="fas fa-list"></i></button>
+                </div>
+            </div>
+
+            <!-- Tag Filtering System -->
+            <div class="tag-filter-container">
+                <div class="tag-filters">
+                    <button class="tag-filter" data-tag="security">Security</button>
+                    <button class="tag-filter" data-tag="database">Database</button>
+                    <button class="tag-filter" data-tag="programming">Programming</button>
+                    <button class="tag-filter" data-tag="design">Design</button>
+                    <button class="tag-filter" data-tag="web">Web</button>
+                </div>
+                <button class="clear-filters">Clear Filters</button>
+                <button class="add-notebook-btn"><i class="fas fa-plus"></i> New Notebook</button>
+            </div>
+
+            <div class="notebooks-grid">
+                <div class="notebook-card" data-notebook-id="1" data-tags="security,web">
+                    <div class="notebook-icon"><i class="fas fa-book"></i></div>
+                    <div class="notebook-info">
+                        <div class="notebook-header">
+                            <h3>Introduction to Cyber Security</h3>
+                            <div class="notebook-actions">
+                                <button class="favorite-btn" data-notebook-id="1" data-notebook-title="Introduction to Cyber Security">
+                                    <i class="far fa-star"></i>
+                                </button>
+                                <button class="share-btn" data-notebook-id="1" data-notebook-title="Introduction to Cyber Security">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                                <button class="edit-notebook-btn" data-notebook-id="1" data-notebook-title="Introduction to Cyber Security">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="notebook-desc">Overview of key concepts in cyber security, threat models, and basic security principles.</p>
+                        <div class="notebook-footer">
+                            <p class="notebook-time">3 hours ago</p>
+                            <div class="notebook-tags">
+                                <span class="notebook-tag">security</span>
+                                <span class="notebook-tag">web</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="notebook-card" data-notebook-id="2" data-tags="design">
+                    <div class="notebook-icon"><i class="fas fa-book"></i></div>
+                    <div class="notebook-info">
+                        <div class="notebook-header">
+                            <h3>Week 3: Colour theory</h3>
+                            <div class="notebook-actions">
+                                <button class="favorite-btn" data-notebook-id="2" data-notebook-title="Week 3: Colour theory">
+                                    <i class="far fa-star"></i>
+                                </button>
+                                <button class="share-btn" data-notebook-id="2" data-notebook-title="Week 3: Colour theory">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                                <button class="edit-notebook-btn" data-notebook-id="2" data-notebook-title="Week 3: Colour theory">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="notebook-desc">Exploration of color psychology, color schemes, and practical applications in UI design.</p>
+                        <div class="notebook-footer">
+                            <p class="notebook-time">6 hours ago</p>
+                            <div class="notebook-tags">
+                                <span class="notebook-tag">design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="notebook-card" data-notebook-id="3" data-tags="database">
+                    <div class="notebook-icon"><i class="fas fa-lock"></i></div>
+                    <div class="notebook-info">
+                        <div class="notebook-header">
+                            <h3>Week 2: What is SQL?</h3>
+                            <div class="notebook-actions">
+                                <button class="favorite-btn" data-notebook-id="3" data-notebook-title="Week 2: What is SQL?">
+                                    <i class="far fa-star"></i>
+                                </button>
+                                <button class="share-btn" data-notebook-id="3" data-notebook-title="Week 2: What is SQL?">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                                <button class="edit-notebook-btn" data-notebook-id="3" data-notebook-title="Week 2: What is SQL?">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="notebook-desc">Introduction to SQL syntax, database queries, and relational database concepts.</p>
+                        <div class="notebook-footer">
+                            <p class="notebook-time">7 hours ago</p>
+                            <div class="notebook-tags">
+                                <span class="notebook-tag">database</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="notebook-card" data-notebook-id="4" data-tags="programming">
+                    <div class="notebook-icon"><i class="fas fa-book"></i></div>
+                    <div class="notebook-info">
+                        <div class="notebook-header">
+                            <h3>Week 1: Object oriented vs functional programming</h3>
+                            <div class="notebook-actions">
+                                <button class="favorite-btn" data-notebook-id="4" data-notebook-title="Week 1: Object oriented vs functional programming">
+                                    <i class="far fa-star"></i>
+                                </button>
+                                <button class="share-btn" data-notebook-id="4" data-notebook-title="Week 1: Object oriented vs functional programming">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                                <button class="edit-notebook-btn" data-notebook-id="4" data-notebook-title="Week 1: Object oriented vs functional programming">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="notebook-desc">Comparison of programming paradigms with examples in Java and Haskell.</p>
+                        <div class="notebook-footer">
+                            <p class="notebook-time">8 hours ago</p>
+                            <div class="notebook-tags">
+                                <span class="notebook-tag">programming</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- More notebook cards with similar structure -->
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <div class="date-weather">
+                <h3>It's</h3>
+                <p class="date">Sunday, the 19th of May 2024.</p>
+                <p class="weather">
+                    You can expect a <i class="fas fa-sun"></i> high of 23° and a <i class="fas fa-temperature-low"></i> low of 9°
+                    with mostly <i class="fas fa-cloud-sun"></i> clear skies today.
+                </p>
+            </div>
+
+            <div class="tasks-today">
+                <h3><i class="fas fa-tasks"></i> Tasks for today</h3>
+                <ul>
+                    <li>
+                        <span class="task-status in-progress">In Progress</span>
+                        <p>Work on final year project URL shortener website</p>
+                    </li>
+                    <li>
+                        <span class="task-status in-progress">In Progress</span>
+                        <p>Finish writing notes on week 1 of Cyber Security lectures</p>
+                    </li>
+                    <li>
+                        <span class="task-status pending">Pending</span>
+                        <p>Start researching on SQL vs NoSQL databases and their comparison</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="assignments-due">
+                <h3><i class="fas fa-clipboard-check"></i> Assignments due today</h3>
+                <ul>
+                    <li>
+                        <div class="assignment-header">
+                            <h4>Databases CW1</h4>
+                            <span class="assignment-status done">Done</span>
+                        </div>
+                        <p>10AM - Coursework</p>
+                    </li>
+                    <li>
+                        <div class="assignment-header">
+                            <h4>Functional programming CW2</h4>
+                            <span class="assignment-status done">Done</span>
+                        </div>
+                        <p>4PM - Coursework</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="calendar-today">
+                <h3><i class="fas fa-calendar-day"></i> On today's calendar</h3>
+                <ul>
+                    <li>
+                        <div class="event-time">11AM - 1PM</div>
+                        <div class="event-details">
+                            <h4>Algorithms and Complexity</h4>
+                            <button class="btn-join">Join</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="event-time">1PM - 2PM</div>
+                        <div class="event-details">
+                            <h4>Artificial Intelligence</h4>
+                            <button class="btn-join">Join</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="event-time">3PM - 4PM</div>
+                        <div class="event-details">
+                            <h4>Computer and Network Security</h4>
+                            <button class="btn-join">Join</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <a href="index.html"><i class="fas fa-home"></i></a>
+        <a href="notebooks.html" class="active"><i class="fas fa-book"></i></a>
+        <a href="assignments.html"><i class="fas fa-tasks"></i></a>
+        <a href="tasks.html"><i class="fas fa-check-circle"></i></a>
+        <a href="calendar.html"><i class="fas fa-calendar"></i></a>
+    </nav>
+
+    <script src="js/main.js"></script>
+    <script src="js/notebooks.js"></script>
+</body>
+</html>

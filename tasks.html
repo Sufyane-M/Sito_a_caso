@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks - Student Dashboard</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="notebooks.html"><i class="fas fa-book"></i> Notebooks</a></li>
+                    <li><a href="assignments.html"><i class="fas fa-tasks"></i> Assignments</a></li>
+                    <li class="active"><a href="tasks.html"><i class="fas fa-check-circle"></i> Tasks</a></li>
+                    <li><a href="calendar.html"><i class="fas fa-calendar"></i> Calendar</a></li>
+                </ul>
+            </nav>
+            <div class="modules-section">
+                <h3>Modules</h3>
+                <ul class="modules-list">
+                    <li><a href="#"><i class="fas fa-lock"></i> Information security</a></li>
+                    <li><a href="#"><i class="fas fa-shield-alt"></i> Cyber Security</a></li>
+                    <li><a href="#"><i class="fas fa-code"></i> Software engineering</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> User-centered design</a></li>
+                    <li><a href="#"><i class="fas fa-project-diagram"></i> Functional programming</a></li>
+                    <li><a href="#"><i class="fas fa-database"></i> Databases</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="greeting-section">
+                <h1>Good afternoon, Ahmed!</h1>
+                <p class="quote">"The key is not to prioritize what's on your schedule, but to schedule your priorities." - Stephen Covey</p>
+            </div>
+
+            <div class="section-header">
+                <h2>Today's Tasks</h2>
+                <button class="btn-hide">Add Task</button>
+            </div>
+
+            <!-- Tag Filtering System -->
+            <div class="tag-filter-container">
+                <div class="tag-filters">
+                    <button class="tag-filter" data-tag="project">Project</button>
+                    <button class="tag-filter" data-tag="research">Research</button>
+                    <button class="tag-filter" data-tag="reading">Reading</button>
+                    <button class="tag-filter" data-tag="writing">Writing</button>
+                    <button class="tag-filter" data-tag="revision">Revision</button>
+                </div>
+                <button class="clear-filters">Clear Filters</button>
+            </div>
+
+            <div class="notebooks-grid">
+                <div class="notebook-card" data-task-id="1" data-tags="project,writing">
+                    <div class="notebook-icon"><i class="fas fa-exclamation-circle" style="color: #FF5F5F;"></i></div>
+                    <div class="notebook-info">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                            <h3>Work on final year project</h3>
+                            <span class="task-status in-progress">In Progress</span>
+                        </div>
+                        <p class="notebook-desc">Continue development of URL shortener website, focus on implementing the analytics dashboard.</p>
+                        <div class="notebook-footer">
+                            <p class="notebook-time">Due today</p>
+                            <div class="notebook-tags">
+                                <span class="notebook-tag">project</span>
+                                <span class="notebook-tag">writing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="notebook-card" data-task-id="2" data-tags="writing,revision">
+                    <div class="notebook-icon"><i class="fas fa-exclamation-circle" style="color: #FF5F5F;"></i></div>
+                    <div class="notebook-info">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                            <h3>Finish Cyber Security notes</h3>
+                            <span class="task-status in-progress">In Progress</span>
+                        </div>
+                        <p class="notebook-desc">Complete notes on week 1 lectures covering introduction to cyber threats and security models.</p>
+                        <div class="notebook-footer">
+                            <p class="notebook-time">Due today</p>
+                            <div class="notebook-tags">
+                                <span class="notebook-tag">writing</span>
+                                <span class="notebook-tag">revision</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="notebook-card" data-task-id="3" data-tags="research">
+                    <div class="notebook-icon"><i class="fas fa-exclamation-circle" style="color: #FF5F5F;"></i></div>
+                    <div class="notebook-info">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                            <h3>Research SQL vs NoSQL</h3>
+                            <span class="task-status pending">Pending</span>
+                        </div>
+                        <p class="notebook-desc">Start researching on SQL vs NoSQL databases and their comparison for the upcoming database assignment.</p>
+                        <div class="notebook-footer">
+                            <p class="notebook-time">Due today</p>
+                            <div class="notebook-tags">
+                                <span class="notebook-tag">research</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header" style="margin-top: 40px;">
+                <h2>Upcoming Tasks</h2>
+            </div>
+
+            <div class="notebooks-grid">
+                <div class="notebook-card" data-task-id="4" data-tags="project,writing">
+                    <div class="notebook-icon"><i class="fas fa-clock" style="color: #5F9EFF;"></i></div>
+                    <div class="notebook-info">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                            <h3>Prepare for Information Security presentation</h3>
+                            <span class="task-status pending">Pending</span>
+                        </div>
+                        <p class="notebook-desc">Create slides and talking points for the group presentation on network security protocols.</p>
+                        <div class="notebook-footer">
+                            <p class="notebook-time">Due tomorrow</p>
+                            <div class="notebook-tags">
+                                <span class="notebook-tag">project</span>
+                                <span class="notebook-tag">writing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="notebook-card" data-task-id="5" data-tags="reading,research">
+                    <div class="notebook-icon"><i class="fas fa-clock" style="color: #FFD700;"></i></div>
+                    <div class="notebook-info">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                            <h3>Read chapter 5 of Database textbook</h3>
+                            <span class="task-status pending">Pending</span>
+                        </div>
+                        <p class="notebook-desc">Complete reading on normalization and database design principles for next week's lecture.</p>
+                        <div class="notebook-footer">
+                            <p class="notebook-time">Due May 22</p>
+                            <div class="notebook-tags">
+                                <span class="notebook-tag">reading</span>
+                                <span class="notebook-tag">research</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="notebook-card" data-task-id="6" data-tags="project,revision">
+                    <div class="notebook-icon"><i class="fas fa-clock" style="color: #5F9EFF;"></i></div>
+                    <div class="notebook-info">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                            <h3>Review UX Design wireframes</h3>
+                            <span class="task-status pending">Pending</span>
+                        </div>
+                        <p class="notebook-desc">Review and provide feedback on the wireframes for the e-commerce website project.</p>
+                        <div class="notebook-footer">
+                            <p class="notebook-time">Due May 25</p>
+                            <div class="notebook-tags">
+                                <span class="notebook-tag">project</span>
+                                <span class="notebook-tag">revision</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <div class="date-weather">
+                <h3>It's</h3>
+                <p class="date">Sunday, the 19th of May 2024.</p>
+                <p class="weather">
+                    You can expect a <i class="fas fa-sun"></i> high of 23° and a <i class="fas fa-temperature-low"></i> low of 9°
+                    with mostly <i class="fas fa-cloud-sun"></i> clear skies today.
+                </p>
+            </div>
+
+            <div class="tasks-today">
+                <h3><i class="fas fa-tasks"></i> Tasks for today</h3>
+                <ul>
+                    <li>
+                        <span class="task-status in-progress">In Progress</span>
+                        <p>Work on final year project URL shortener website</p>
+                    </li>
+                    <li>
+                        <span class="task-status in-progress">In Progress</span>
+                        <p>Finish writing notes on week 1 of Cyber Security lectures</p>
+                    </li>
+                    <li>
+                        <span class="task-status pending">Pending</span>
+                        <p>Start researching on SQL vs NoSQL databases and their comparison</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="assignments-due">
+                <h3><i class="fas fa-clipboard-check"></i> Assignments due today</h3>
+                <ul>
+                    <li>
+                        <div class="assignment-header">
+                            <h4>Databases CW1</h4>
+                            <span class="assignment-status done">Done</span>
+                        </div>
+                        <p>10AM - Coursework</p>
+                    </li>
+                    <li>
+                        <div class="assignment-header">
+                            <h4>Functional programming CW2</h4>
+                            <span class="assignment-status done">Done</span>
+                        </div>
+                        <p>4PM - Coursework</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="calendar-today">
+                <h3><i class="fas fa-calendar-day"></i> On today's calendar</h3>
+                <ul>
+                    <li>
+                        <div class="event-time">11AM - 1PM</div>
+                        <div class="event-details">
+                            <h4>Algorithms and Complexity</h4>
+                            <button class="btn-join">Join</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="event-time">1PM - 2PM</div>
+                        <div class="event-details">
+                            <h4>Artificial Intelligence</h4>
+                            <button class="btn-join">Join</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="event-time">3PM - 4PM</div>
+                        <div class="event-details">
+                            <h4>Computer and Network Security</h4>
+                            <button class="btn-join">Join</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <a href="index.html"><i class="fas fa-home"></i></a>
+        <a href="notebooks.html"><i class="fas fa-book"></i></a>
+        <a href="assignments.html"><i class="fas fa-tasks"></i></a>
+        <a href="tasks.html" class="active"><i class="fas fa-check-circle"></i></a>
+        <a href="calendar.html"><i class="fas fa-calendar"></i></a>
+    </nav>
+
+    <script src="js/main.js"></script>
+    <script src="js/tasks.js"></script>
+</body>
+</html>

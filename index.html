@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="notebooks.html"><i class="fas fa-book"></i> Notebooks</a></li>
+                    <li><a href="assignments.html"><i class="fas fa-tasks"></i> Assignments</a></li>
+                    <li><a href="tasks.html"><i class="fas fa-check-circle"></i> Tasks</a></li>
+                    <li><a href="calendar.html"><i class="fas fa-calendar"></i> Calendar</a></li>
+                </ul>
+            </nav>
+            <div class="modules-section">
+                <h3>Modules</h3>
+                <ul class="modules-list">
+                    <li><a href="#"><i class="fas fa-lock"></i> Information security</a></li>
+                    <li><a href="#"><i class="fas fa-shield-alt"></i> Cyber Security</a></li>
+                    <li><a href="#"><i class="fas fa-code"></i> Software engineering</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> User-centered design</a></li>
+                    <li><a href="#"><i class="fas fa-project-diagram"></i> Functional programming</a></li>
+                    <li><a href="#"><i class="fas fa-database"></i> Databases</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="greeting-section">
+                <h1>Good afternoon, Ahmed!</h1>
+                <p class="quote">"The final wisdom of life requires not the annulment of incongruity but the achievement of serenity within and above it." - Reinhold Niebuhr</p>
+            </div>
+
+            <div class="modules-container">
+                <div class="section-header">
+                    <h2>Recently visited modules</h2>
+                    <button class="btn-hide">Hide</button>
+                </div>
+                <div class="modules-grid">
+                    <div class="module-card" style="--accent-color: #FF5F5F;">
+                        <div class="module-icon"><i class="fas fa-lock"></i></div>
+                        <h3>Information security</h3>
+                        <p class="module-code">IY3840</p>
+                        <p class="tasks-remaining">8 Tasks remaining</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 35%;"></div>
+                        </div>
+                    </div>
+                    <div class="module-card" style="--accent-color: #5F9EFF;">
+                        <div class="module-icon"><i class="fas fa-database"></i></div>
+                        <h3>Databases</h3>
+                        <p class="module-code">CS2850</p>
+                        <p class="tasks-remaining">3 Tasks remaining</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                    <div class="module-card" style="--accent-color: #B15FFF;">
+                        <div class="module-icon"><i class="fas fa-project-diagram"></i></div>
+                        <h3>Functional programming</h3>
+                        <p class="module-code">CS3380</p>
+                        <p class="tasks-remaining">15 Tasks remaining</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 20%;"></div>
+                        </div>
+                    </div>
+                    <div class="module-card" style="--accent-color: #5FFF9E;">
+                        <div class="module-icon"><i class="fas fa-user"></i></div>
+                        <h3>User-centered design</h3>
+                        <p class="module-code">CS3200</p>
+                        <p class="tasks-remaining">5 Tasks remaining</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notebooks-container">
+                <div class="section-header">
+                    <h2>Notebooks</h2>
+                    <div class="view-controls">
+                        <button class="btn-grid active"><i class="fas fa-th"></i></button>
+                        <button class="btn-list"><i class="fas fa-list"></i></button>
+                    </div>
+                </div>
+                <div class="notebooks-grid">
+                    <div class="notebook-card">
+                        <div class="notebook-icon"><i class="fas fa-book"></i></div>
+                        <div class="notebook-info">
+                            <h3>Introduction to Cyber Security</h3>
+                            <p class="notebook-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie elementum arcu et blandit.</p>
+                            <p class="notebook-time">3 hours ago</p>
+                        </div>
+                    </div>
+                    <div class="notebook-card">
+                        <div class="notebook-icon"><i class="fas fa-book"></i></div>
+                        <div class="notebook-info">
+                            <h3>Week 3: Colour theory</h3>
+                            <p class="notebook-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie elementum arcu et blandit.</p>
+                            <p class="notebook-time">6 hours ago</p>
+                        </div>
+                    </div>
+                    <div class="notebook-card">
+                        <div class="notebook-icon"><i class="fas fa-lock"></i></div>
+                        <div class="notebook-info">
+                            <h3>Week 2: What is SQL?</h3>
+                            <p class="notebook-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie elementum arcu et blandit.</p>
+                            <p class="notebook-time">7 hours ago</p>
+                        </div>
+                    </div>
+                    <div class="notebook-card">
+                        <div class="notebook-icon"><i class="fas fa-book"></i></div>
+                        <div class="notebook-info">
+                            <h3>Week 1: Object oriented vs functional programming</h3>
+                            <p class="notebook-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie elementum arcu et blandit.</p>
+                            <p class="notebook-time">8 hours ago</p>
+                        </div>
+                    </div>
+                    <div class="notebook-card">
+                        <div class="notebook-icon"><i class="fas fa-book"></i></div>
+                        <div class="notebook-info">
+                            <h3>Week 1: Introduction to information security</h3>
+                            <p class="notebook-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie elementum arcu et blandit.</p>
+                            <p class="notebook-time">12 hours ago</p>
+                        </div>
+                    </div>
+                    <div class="notebook-card">
+                        <div class="notebook-icon"><i class="fas fa-book"></i></div>
+                        <div class="notebook-info">
+                            <h3>Week 2: Typography</h3>
+                            <p class="notebook-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie elementum arcu et blandit.</p>
+                            <p class="notebook-time">3 days ago</p>
+                        </div>
+                    </div>
+                    <div class="notebook-card">
+                        <div class="notebook-icon"><i class="fas fa-book"></i></div>
+                        <div class="notebook-info">
+                            <h3>Week 3: TypeScript is love, TypeScript is life</h3>
+                            <p class="notebook-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie elementum arcu et blandit.</p>
+                            <p class="notebook-time">2 days ago</p>
+                        </div>
+                    </div>
+                    <div class="notebook-card">
+                        <div class="notebook-icon"><i class="fas fa-book"></i></div>
+                        <div class="notebook-info">
+                            <h3>Week 5: NoSQL vs SQL</h3>
+                            <p class="notebook-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie elementum arcu et blandit.</p>
+                            <p class="notebook-time">2 days ago</p>
+                        </div>
+                    </div>
+                    <div class="notebook-card">
+                        <div class="notebook-icon"><i class="fas fa-book"></i></div>
+                        <div class="notebook-info">
+                            <h3>Week 3: SQL Injection attacks</h3>
+                            <p class="notebook-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie elementum arcu et blandit.</p>
+                            <p class="notebook-time">23 hours ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <div class="date-weather">
+                <h3>It's</h3>
+                <p class="date">Sunday, the 19th of May 2024.</p>
+                <p class="weather">
+                    You can expect a <i class="fas fa-sun"></i> high of 23° and a <i class="fas fa-temperature-low"></i> low of 9°
+                    with mostly <i class="fas fa-cloud-sun"></i> clear skies today.
+                </p>
+            </div>
+
+            <div class="tasks-today">
+                <h3><i class="fas fa-tasks"></i> Tasks for today</h3>
+                <ul>
+                    <li>
+                        <span class="task-status in-progress">In Progress</span>
+                        <p>Work on final year project URL shortener website</p>
+                    </li>
+                    <li>
+                        <span class="task-status in-progress">In Progress</span>
+                        <p>Finish writing notes on week 1 of Cyber Security lectures</p>
+                    </li>
+                    <li>
+                        <span class="task-status pending">Pending</span>
+                        <p>Start researching on SQL vs NoSQL databases and their comparison</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="assignments-due">
+                <h3><i class="fas fa-clipboard-check"></i> Assignments due today</h3>
+                <ul>
+                    <li>
+                        <div class="assignment-header">
+                            <h4>Databases CW1</h4>
+                            <span class="assignment-status done">Done</span>
+                        </div>
+                        <p>10AM - Coursework</p>
+                    </li>
+                    <li>
+                        <div class="assignment-header">
+                            <h4>Functional programming CW2</h4>
+                            <span class="assignment-status done">Done</span>
+                        </div>
+                        <p>4PM - Coursework</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="calendar-today">
+                <h3><i class="fas fa-calendar-day"></i> On today's calendar</h3>
+                <ul>
+                    <li>
+                        <div class="event-time">11AM - 1PM</div>
+                        <div class="event-details">
+                            <h4>Algorithms and Complexity</h4>
+                            <button class="btn-join">Join</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="event-time">1PM - 2PM</div>
+                        <div class="event-details">
+                            <h4>Artificial Intelligence</h4>
+                            <button class="btn-join">Join</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="event-time">3PM - 4PM</div>
+                        <div class="event-details">
+                            <h4>Computer and Network Security</h4>
+                            <button class="btn-join">Join</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments - Student Dashboard</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="notebooks.html"><i class="fas fa-book"></i> Notebooks</a></li>
+                    <li class="active"><a href="assignments.html"><i class="fas fa-tasks"></i> Assignments</a></li>
+                    <li><a href="tasks.html"><i class="fas fa-check-circle"></i> Tasks</a></li>
+                    <li><a href="calendar.html"><i class="fas fa-calendar"></i> Calendar</a></li>
+                </ul>
+            </nav>
+            <div class="modules-section">
+                <h3>Modules</h3>
+                <ul class="modules-list">
+                    <li><a href="#"><i class="fas fa-lock"></i> Information security</a></li>
+                    <li><a href="#"><i class="fas fa-shield-alt"></i> Cyber Security</a></li>
+                    <li><a href="#"><i class="fas fa-code"></i> Software engineering</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> User-centered design</a></li>
+                    <li><a href="#"><i class="fas fa-project-diagram"></i> Functional programming</a></li>
+                    <li><a href="#"><i class="fas fa-database"></i> Databases</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="greeting-section">
+                <h1>Good afternoon, Ahmed!</h1>
+                <p class="quote">"The secret of getting ahead is getting started. The secret of getting started is breaking your complex overwhelming tasks into small manageable tasks." - Mark Twain</p>
+            </div>
+
+            <div class="section-header">
+                <h2>Current Assignments</h2>
+                <div class="view-controls">
+                    <button class="add-assignment-btn"><i class="fas fa-plus"></i> New Assignment</button>
+                </div>
+            </div>
+
+            <!-- Tag Filtering System -->
+            <div class="tag-filter-container">
+                <div class="tag-filters">
+                    <button class="tag-filter" data-tag="essay"><i class="fas fa-pen-alt"></i> Essay</button>
+                    <button class="tag-filter" data-tag="project"><i class="fas fa-project-diagram"></i> Project</button>
+                    <button class="tag-filter" data-tag="exam"><i class="fas fa-file-alt"></i> Exam</button>
+                    <button class="tag-filter" data-tag="lab"><i class="fas fa-flask"></i> Lab</button>
+                    <button class="tag-filter" data-tag="report"><i class="fas fa-chart-bar"></i> Report</button>
+                </div>
+                <button class="clear-filters"><i class="fas fa-times-circle"></i> Clear Filters</button>
+            </div>
+
+            <div class="assignments-grid">
+                <div class="assignment-card" data-assignment-id="1" data-tags="essay,report" style="--accent-color: #FF5F5F;">
+                    <div class="assignment-header">
+                        <h3>Information Security Essay</h3>
+                        <div class="assignment-actions">
+                            <button class="edit-assignment-btn" data-assignment-id="1" data-assignment-title="Information Security Essay" data-due-date="2024-05-24">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="assignment-desc">Write a 2000-word essay on modern cybersecurity threats and mitigation strategies.</p>
+                    <p class="due-date">Due: May 24, 2024</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 35%;"></div>
+                    </div>
+                    <div class="assignment-footer">
+                        <div class="assignment-tags">
+                            <span class="assignment-tag">essay</span>
+                            <span class="assignment-tag">report</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="assignment-card" data-assignment-id="2" data-tags="project,lab" style="--accent-color: #5F9EFF;">
+                    <div class="assignment-header">
+                        <h3>Database Design Project</h3>
+                        <div class="assignment-actions">
+                            <button class="edit-assignment-btn" data-assignment-id="2" data-assignment-title="Database Design Project" data-due-date="2024-05-21">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="assignment-desc">Design and implement a relational database for an e-commerce platform.</p>
+                    <p class="due-date">Due: May 21, 2024</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 65%;"></div>
+                    </div>
+                    <div class="assignment-footer">
+                        <div class="assignment-tags">
+                            <span class="assignment-tag">project</span>
+                            <span class="assignment-tag">lab</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="assignment-card" data-assignment-id="3" data-tags="lab" style="--accent-color: #B15FFF;">
+                    <div class="assignment-header">
+                        <h3>Functional Programming Lab</h3>
+                        <div class="assignment-actions">
+                            <button class="edit-assignment-btn" data-assignment-id="3" data-assignment-title="Functional Programming Lab" data-due-date="2024-05-26">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="assignment-desc">Complete a series of programming exercises using Haskell.</p>
+                    <p class="due-date">Due: May 26, 2024</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 20%;"></div>
+                    </div>
+                    <div class="assignment-footer">
+                        <div class="assignment-tags">
+                            <span class="assignment-tag">lab</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="assignment-card" data-assignment-id="4" data-tags="report,project" style="--accent-color: #5FFF9E;">
+                    <div class="assignment-header">
+                        <h3>UX Research Report</h3>
+                        <div class="assignment-actions">
+                            <button class="edit-assignment-btn" data-assignment-id="4" data-assignment-title="UX Research Report" data-due-date="2024-05-29">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="assignment-desc">Conduct user research and prepare a detailed report on findings and recommendations.</p>
+                    <p class="due-date">Due: May 29, 2024</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                    <div class="assignment-footer">
+                        <div class="assignment-tags">
+                            <span class="assignment-tag">report</span>
+                            <span class="assignment-tag">project</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header" style="margin-top: 40px;">
+                <h2>Completed Assignments</h2>
+            </div>
+
+            <div class="assignments-grid">
+                <div class="assignment-card" data-assignment-id="5" data-tags="exam" style="--accent-color: #3A7D44;">
+                    <div class="assignment-header">
+                        <h3>Software Engineering Mid-term</h3>
+                        <div class="assignment-actions">
+                            <button class="edit-assignment-btn" data-assignment-id="5" data-assignment-title="Software Engineering Mid-term" data-due-date="2024-05-10">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="assignment-desc">Online exam covering software development methodologies and practices.</p>
+                    <p class="due-date">Completed: May 10, 2024</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 100%;"></div>
+                    </div>
+                    <div class="assignment-footer">
+                        <div class="assignment-tags">
+                            <span class="assignment-tag">exam</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="assignment-card" data-assignment-id="6" data-tags="essay" style="--accent-color: #3A7D44;">
+                    <div class="assignment-header">
+                        <h3>Cyber Ethics Essay</h3>
+                        <div class="assignment-actions">
+                            <button class="edit-assignment-btn" data-assignment-id="6" data-assignment-title="Cyber Ethics Essay" data-due-date="2024-05-05">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="assignment-desc">Essay on ethical considerations in cybersecurity and data privacy.</p>
+                    <p class="due-date">Completed: May 5, 2024</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 100%;"></div>
+                    </div>
+                    <div class="assignment-footer">
+                        <div class="assignment-tags">
+                            <span class="assignment-tag">essay</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <div class="date-weather">
+                <h3>It's</h3>
+                <p class="date">Sunday, the 19th of May 2024.</p>
+                <p class="weather">
+                    You can expect a <i class="fas fa-sun"></i> high of 23° and a <i class="fas fa-temperature-low"></i> low of 9°
+                    with mostly <i class="fas fa-cloud-sun"></i> clear skies today.
+                </p>
+            </div>
+
+            <div class="tasks-today">
+                <h3><i class="fas fa-tasks"></i> Tasks for today</h3>
+                <ul>
+                    <li>
+                        <span class="task-status in-progress">In Progress</span>
+                        <p>Work on final year project URL shortener website</p>
+                    </li>
+                    <li>
+                        <span class="task-status in-progress">In Progress</span>
+                        <p>Finish writing notes on week 1 of Cyber Security lectures</p>
+                    </li>
+                    <li>
+                        <span class="task-status pending">Pending</span>
+                        <p>Start researching on SQL vs NoSQL databases and their comparison</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="assignments-due">
+                <h3><i class="fas fa-clipboard-check"></i> Assignments due today</h3>
+                <ul>
+                    <li>
+                        <div class="assignment-header">
+                            <h4>Databases CW1</h4>
+                            <span class="assignment-status done">Done</span>
+                        </div>
+                        <p>10AM - Coursework</p>
+                    </li>
+                    <li>
+                        <div class="assignment-header">
+                            <h4>Functional programming CW2</h4>
+                            <span class="assignment-status done">Done</span>
+                        </div>
+                        <p>4PM - Coursework</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="calendar-today">
+                <h3><i class="fas fa-calendar-day"></i> On today's calendar</h3>
+                <ul>
+                    <li>
+                        <div class="event-time">11AM - 1PM</div>
+                        <div class="event-details">
+                            <h4>Algorithms and Complexity</h4>
+                            <button class="btn-join">Join</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="event-time">1PM - 2PM</div>
+                        <div class="event-details">
+                            <h4>Artificial Intelligence</h4>
+                            <button class="btn-join">Join</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="event-time">3PM - 4PM</div>
+                        <div class="event-details">
+                            <h4>Computer and Network Security</h4>
+                            <button class="btn-join">Join</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <a href="index.html"><i class="fas fa-home"></i></a>
+        <a href="notebooks.html"><i class="fas fa-book"></i></a>
+        <a href="assignments.html" class="active"><i class="fas fa-tasks"></i></a>
+        <a href="tasks.html"><i class="fas fa-check-circle"></i></a>
+        <a href="calendar.html"><i class="fas fa-calendar"></i></a>
+    </nav>
+
+    <script src="js/main.js"></script>
+    <script src="js/assignments.js"></script>
+</body>
+</html>
